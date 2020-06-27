@@ -115,3 +115,42 @@ D:\Yuuta\FrameworkCFHouse\Model\obj\Debug\Model.csproj.CoreCompileInputs.cache
 D:\Yuuta\FrameworkCFHouse\Model\obj\Debug\Model.csproj.CopyComplete
 D:\Yuuta\FrameworkCFHouse\Model\obj\Debug\Model.dll
 D:\Yuuta\FrameworkCFHouse\Model\obj\Debug\Model.pdb
+C:\Users\Quoc Tuan\Desktop\Ad\Model\bin\Debug\Model.dll.config
+C:\Users\Quoc Tuan\Desktop\Ad\Model\bin\Debug\Model.dll
+C:\Users\Quoc Tuan\Desktop\Ad\Model\bin\Debug\Model.pdb
+C:\Users\Quoc Tuan\Desktop\Ad\Model\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\Quoc Tuan\Desktop\Ad\Model\bin\Debug\EntityFramework.dll
+C:\Users\Quoc Tuan\Desktop\Ad\Model\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Quoc Tuan\Desktop\Ad\Model\bin\Debug\Google.Protobuf.dll
+C:\Users\Quoc Tuan\Desktop\Ad\Model\bin\Debug\K4os.Compression.LZ4.dll
+C:\Users\Quoc Tuan\Desktop\Ad\Model\bin\Debug\K4os.Compression.LZ4.Streams.dll
+C:\Users\Quoc Tuan\Desktop\Ad\Model\bin\Debug\K4os.Hash.xxHash.dll
+C:\Users\Quoc Tuan\Desktop\Ad\Model\bin\Debug\MySql.Data.dll
+C:\Users\Quoc Tuan\Desktop\Ad\Model\bin\Debug\MySql.Data.EntityFramework.dll
+C:\Users\Quoc Tuan\Desktop\Ad\Model\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Quoc Tuan\Desktop\Ad\Model\bin\Debug\Renci.SshNet.dll
+C:\Users\Quoc Tuan\Desktop\Ad\Model\bin\Debug\System.Buffers.dll
+C:\Users\Quoc Tuan\Desktop\Ad\Model\bin\Debug\System.Memory.dll
+C:\Users\Quoc Tuan\Desktop\Ad\Model\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\Quoc Tuan\Desktop\Ad\Model\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\Quoc Tuan\Desktop\Ad\Model\bin\Debug\Ubiety.Dns.Core.dll
+C:\Users\Quoc Tuan\Desktop\Ad\Model\bin\Debug\Zstandard.Net.dll
+C:\Users\Quoc Tuan\Desktop\Ad\Model\bin\Debug\EntityFramework.xml
+C:\Users\Quoc Tuan\Desktop\Ad\Model\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Quoc Tuan\Desktop\Ad\Model\bin\Debug\Google.Protobuf.xml
+C:\Users\Quoc Tuan\Desktop\Ad\Model\bin\Debug\K4os.Compression.LZ4.xml
+C:\Users\Quoc Tuan\Desktop\Ad\Model\bin\Debug\K4os.Compression.LZ4.Streams.xml
+C:\Users\Quoc Tuan\Desktop\Ad\Model\bin\Debug\K4os.Hash.xxHash.xml
+C:\Users\Quoc Tuan\Desktop\Ad\Model\bin\Debug\MySql.Data.xml
+C:\Users\Quoc Tuan\Desktop\Ad\Model\bin\Debug\MySql.Data.EntityFramework.xml
+C:\Users\Quoc Tuan\Desktop\Ad\Model\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Quoc Tuan\Desktop\Ad\Model\bin\Debug\Renci.SshNet.xml
+C:\Users\Quoc Tuan\Desktop\Ad\Model\bin\Debug\System.Buffers.xml
+C:\Users\Quoc Tuan\Desktop\Ad\Model\bin\Debug\System.Memory.xml
+C:\Users\Quoc Tuan\Desktop\Ad\Model\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\Quoc Tuan\Desktop\Ad\Model\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\Quoc Tuan\Desktop\Ad\Model\obj\Debug\Model.csprojAssemblyReference.cache
+C:\Users\Quoc Tuan\Desktop\Ad\Model\obj\Debug\Model.csproj.CoreCompileInputs.cache
+C:\Users\Quoc Tuan\Desktop\Ad\Model\obj\Debug\Model.csproj.CopyComplete
+C:\Users\Quoc Tuan\Desktop\Ad\Model\obj\Debug\Model.dll
+C:\Users\Quoc Tuan\Desktop\Ad\Model\obj\Debug\Model.pdb

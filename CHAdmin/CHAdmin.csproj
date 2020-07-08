@@ -75,12 +75,6 @@
     <Reference Include="MySql.Data.EntityFramework, Version=8.0.20.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
       <HintPath>..\packages\MySql.Data.EntityFramework.8.0.20\lib\net452\MySql.Data.EntityFramework.dll</HintPath>
     </Reference>
-    <Reference Include="PagedList, Version=1.17.0.0, Culture=neutral, PublicKeyToken=abbb863e9397c5e1, processorArchitecture=MSIL">
-      <HintPath>..\packages\PagedList.1.17.0.0\lib\net40\PagedList.dll</HintPath>
-    </Reference>
-    <Reference Include="PagedList.Mvc, Version=4.5.0.0, Culture=neutral, PublicKeyToken=abbb863e9397c5e1, processorArchitecture=MSIL">
-      <HintPath>..\packages\PagedList.Mvc.4.5.0.0\lib\net40\PagedList.Mvc.dll</HintPath>
-    </Reference>
     <Reference Include="Renci.SshNet, Version=2016.1.0.0, Culture=neutral, PublicKeyToken=1cee9f8bde3db106, processorArchitecture=MSIL">
       <HintPath>..\packages\SSH.NET.2016.1.0\lib\net40\Renci.SshNet.dll</HintPath>
     </Reference>
@@ -185,31 +179,21 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Areas\Client\ClientAreaRegistration.cs" />
     <Compile Include="Areas\Client\Controllers\CartController.cs" />
-    <Compile Include="Areas\Client\Controllers\ChangePassWordController.cs" />
     <Compile Include="Areas\Client\Controllers\CheckOutController.cs" />
     <Compile Include="Areas\Client\Controllers\ClientInfoController.cs" />
     <Compile Include="Areas\Client\Controllers\DetailController.cs" />
-    <Compile Include="Areas\Client\Controllers\ForgotPasswordController.cs" />
-    <Compile Include="Areas\Client\Controllers\GetNewsController.cs" />
     <Compile Include="Areas\Client\Controllers\HomeController.cs" />
     <Compile Include="Areas\Client\Controllers\LoginController.cs" />
     <Compile Include="Areas\Client\Controllers\ProductController.cs" />
     <Compile Include="Areas\Client\Controllers\RegisterController.cs" />
-    <Compile Include="Areas\Client\Controllers\SearchController.cs" />
     <Compile Include="Areas\Client\Dao\CartDao.cs" />
-    <Compile Include="Areas\Client\Dao\ChangePasswordDao.cs" />
     <Compile Include="Areas\Client\Dao\CheckOutDao.cs" />
     <Compile Include="Areas\Client\Dao\ClientInfoDao.cs" />
     <Compile Include="Areas\Client\Dao\DetailDao.cs" />
-    <Compile Include="Areas\Client\Dao\forgotPasswordDao.cs" />
-    <Compile Include="Areas\Client\Dao\GetNewsDao.cs" />
     <Compile Include="Areas\Client\Dao\HomeDao.cs" />
     <Compile Include="Areas\Client\Dao\LoginDao.cs" />
     <Compile Include="Areas\Client\Dao\ProductDao.cs" />
     <Compile Include="Areas\Client\Dao\RegisterDao.cs" />
-    <Compile Include="Areas\Client\Dao\reminderDao.cs" />
-    <Compile Include="Areas\Client\Dao\SearchDao.cs" />
-    <Compile Include="Areas\Client\Dao\taikhoanDao.cs" />
     <Compile Include="Common\Constants.cs" />
     <Compile Include="Common\Encrypt.cs" />
     <Compile Include="Common\Userlogin.cs" />
@@ -228,7 +212,6 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\cartModel.cs" />
-    <Compile Include="Models\ChangePassModel.cs" />
     <Compile Include="Models\CheckOutInfoModel.cs" />
     <Compile Include="Models\InfoClienModel.cs" />
     <Compile Include="Models\loginModel.cs" />
@@ -1819,7 +1802,6 @@
     <Content Include="Assets\upload\_thumbs\Images\cach-trang-diem-cho-mui-to-2.png" />
     <Content Include="Assets\upload\_thumbs\Images\sua-mui-boc-sun-2.jpg" />
     <Content Include="Assets\upload\_thumbs\Images\sua-mui-boc-sun-3.jpg" />
-    <Content Include="Content\PagedList.css" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Web.config" />
@@ -1834,7 +1816,6 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Areas\Client\Data\" />
-    <Folder Include="Areas\Client\Views\GetNews\" />
     <Folder Include="Assets\upload\files\" />
     <Folder Include="Assets\upload\flash\" />
     <Folder Include="Assets\upload\images\san-pham\" />
@@ -2249,10 +2230,6 @@
     <Content Include="Areas\Client\Views\ClientInfo\Index.cshtml" />
     <Content Include="Areas\Client\Views\Login\Index.cshtml" />
     <Content Include="Areas\Client\Views\Register\Index.cshtml" />
-    <Content Include="Areas\Client\Views\ChangePassWord\Index.cshtml" />
-    <Content Include="Areas\Client\Views\ForgotPassword\Index.cshtml" />
-    <Content Include="Areas\Client\Views\ForgotPassword\Khoiphucmatkhau.cshtml" />
-    <Content Include="Areas\Client\Views\Search\Index.cshtml" />
     <None Include="packages.config" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Admin\Index.cshtml" />

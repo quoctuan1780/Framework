@@ -1,13 +1,10 @@
-﻿@using PagedList.Mvc
-
-@{
+﻿@{
     ViewBag.Title = "Detail";
     Layout = "~/Areas/Client/Views/Shared/_LayoutMaster.cshtml";
-    //var spmoi = CHAdmin.Areas.Client.Dao.HomeDao.getSPKM().ToList();
-    var spmoi = new Model.EF.CoffeeHouseDbContext().sanphams.OrderByDescending(x => x.ngaynhap).Take(3).ToList();
+    var spmoi = CHAdmin.Areas.Client.Dao.HomeDao.getSPKM().ToList();
     int maloaisp = (int)ViewData["maloaisp"];
     var loai = new CHAdmin.Areas.Client.Dao.DetailDao().getTuongTu(maloaisp);
-    var banchay = new CHAdmin.Areas.Client.Dao.DetailDao().getBanChay();
+    //var banchay = new CHAdmin.Areas.Client.Dao.DetailDao().getBanChay();
 }
 @model Model.EF.sanpham
 
@@ -133,13 +130,13 @@
                         <h3 class="widget-title">Bán chạy nhất</h3>
                         <div class="widget-body">
                             <div class="beta-sales beta-lists">
-                                @foreach (var sp in banchay)
+                                @*@foreach (var sp in banchay)
                                     {
                                         <div class="media beta-sales-item">
                                             <a class="pull-left" href="{{route('chi-tiet-san-pham', $spbc->masp)}}"><img src="image/product/@sp.hinhanh" alt=""></a>
                                             <div class="media-body">
                                                 @sp.tensp<br>
-                                                @if (@sp.giakm == 0)
+                                                if (@sp.giakm == 0)
                                                 {
                                                 <span class="beta-sales-price">@sp.gia VND</span>
                                                 }
@@ -149,7 +146,7 @@
                                                 }
                                             </div>
                                         </div>
-                                    }
+                                    }*@
                             </div>
                         </div>
                     </div> <!-- best sellers widget -->

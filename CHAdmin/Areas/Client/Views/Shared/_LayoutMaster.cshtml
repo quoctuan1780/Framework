@@ -1,4 +1,4 @@
-﻿    <!doctype html>
+﻿<!doctype html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -77,24 +77,6 @@
             }
             )
         });
-    </script>
-    <script>
-        function getNews(mail) {
-            $.ajax({
-                url: "/Client/GetNews/GetNews?mail=" + mail,
-                method: "GET",
-                data: { mail: mail },
-                success: function (data) {
-                    if (data == "ok")
-                        swal({
-                            title: "Thông báo",
-                            text: "Đăng kí nhận tin thành công",
-                            icon: "success",
-                            button: "Ok",
-                        });
-                }
-            });
-        }
     </script>
 </body>
 </html>

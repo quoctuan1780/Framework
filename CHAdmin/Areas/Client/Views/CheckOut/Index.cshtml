@@ -36,7 +36,7 @@
 
 
             @*<form action="{{route('dat-hang')}}" method="post" class="beta-form-checkout">
-            <input type="hidden" name="_token" value="{{csrf_token()}}">*@
+                <input type="hidden" name="_token" value="{{csrf_token()}}">*@
             using (Html.BeginForm(new { @class = "beta-form-checkout", FormMethod.Post }))
             {
                 @Html.AntiForgeryToken()
@@ -44,7 +44,7 @@
                 <div class="row">
                     @if (ViewBag.Success != null)
                     {
-                        <div class="alert alert-success"> @ViewBag.Success </div>
+                        <div class="alert alert-success">@ViewBag.Success</div>
                     }
                 </div>
                 <div class="row">
@@ -54,10 +54,10 @@
 
                         <div class="form-block">
                             @*<label style="padding-top: 10px">Email*</label>
-                <input type="email" id="emailAjax" name="emailAjax" required placeholder="expample@gmail.com">*@
+                                <input type="email" id="emailAjax" name="emailAjax" required placeholder="expample@gmail.com">*@
                             @Html.LabelFor(model => model.gmail, new { @class = "control-label col-md-2", style = "padding-top: 10px" })
                             <div class="col-md-10">
-                                @Html.TextBoxFor(model => model.gmail, new { @class = "form-control", id = "emailAjax", placeholder = "expample@gmail.com", required = "" })
+                                @Html.TextBoxFor(model => model.gmail, new { @class = "form-control", Name = "emailAjax", id = "emailAjax", placeholder = "expample@gmail.com", required = "" })
                                 @Html.ValidationMessageFor(model => model.gmail, "", new { @class = "text-danger" })
                             </div>
                         </div>
@@ -65,10 +65,10 @@
                         <div id="datachange">
                             <div class="form-block">
                                 @*<label for="name">Họ tên*</label>
-                    <input type="text" id="nameAjax" name="hotenAjax" placeholder="Họ tên" required>*@
+                                    <input type="text" id="nameAjax" name="hotenAjax" placeholder="Họ tên" required>*@
                                 @Html.LabelFor(model => model.tenKH, new { @class = "control-label col-md-2" })
                                 <div class="col-md-10">
-                                    @Html.TextBoxFor(model => model.tenKH, new { @class = "form-control", id = "nameAjax", placeholder = "Họ tên", required = "" })
+                                    @Html.TextBoxFor(model => model.tenKH, new { @class = "form-control", id = "nameAjax", Name = "hotenAjax", placeholder = "Họ tên", required = "" })
                                     @Html.ValidationMessageFor(model => model.tenKH, "", new { @class = "text-danger" })
                                 </div>
                             </div>
@@ -76,15 +76,15 @@
                             <div class="form-block">
                                 <label>Giới tính </label>
                                 @*<input id="genderAjax" type="radio" class="input-radio" name="gioitinhAjax" value="Nam" checked="checked" style="width: 10%"><span style="margin-right: 10%">Nam</span>
-                    <input id="genderAjax" type="radio" class="input-radio" name="gioitinhAjax" value="Nữ" style="width: 10%"><span>Nữ</span>*@
+                                    <input id="genderAjax" type="radio" class="input-radio" name="gioitinhAjax" value="Nữ" style="width: 10%"><span>Nữ</span>*@
                                 @Html.LabelFor(model => model.gioitinh, new { @class = "control-label col-md-2" })
                                 <div class="col-md-10">
-                                    @Html.RadioButtonFor(model => model.gioitinh, "Nam", new { @class = "input-radio", id = "genderAjax", Value = "Nam", @checked = "checked" })
+                                    @Html.RadioButtonFor(model => model.gioitinh, "Nam", new { @class = "input-radio", id = "genderAjax", Name = "gioitinhAjax", Value = "Nam", @checked = "checked" })
                                     <span style="margin-right: 10%">Nam</span>
                                     @Html.ValidationMessageFor(model => model.gioitinh, "", new { @class = "input-radio" })
                                 </div>
                                 <div class="col-md-10">
-                                    @Html.RadioButtonFor(model => model.gioitinh, "Nữ", new { @class = "input-radio", id = "genderAjax", Value = "Nữ" })
+                                    @Html.RadioButtonFor(model => model.gioitinh, "Nữ", new { @class = "input-radio", id = "genderAjax", Name = "gioitinhAjax", Value = "Nữ" })
                                     <span>Nữ</span>
                                     @Html.ValidationMessageFor(model => model.gioitinh, "", new { @class = "input-radio" })
                                 </div>
@@ -92,20 +92,20 @@
 
                             <div class="form-block">
                                 @*<label for="adress" style="padding-top: 10px">Địa chỉ*</label>
-                    <input type="text" id="addressAjax" name="diachiAjax" placeholder="Street Address" required>*@
+                                    <input type="text" id="addressAjax" name="diachiAjax" placeholder="Street Address" required>*@
                                 @Html.LabelFor(model => model.diaChi, new { @class = "control-label col-md-2", style = "padding-top: 10px" })
                                 <div class="col-md-10">
-                                    @Html.TextBoxFor(model => model.diaChi, new { @class = "form-control", id = "addressAjax", placeholder = "Street Address", required = "" })
+                                    @Html.TextBoxFor(model => model.diaChi, new { @class = "form-control", id = "addressAjax", Name = "diachiAjax", placeholder = "Street Address", required = "" })
                                     @Html.ValidationMessageFor(model => model.diaChi, "", new { @class = "text-danger" })
                                 </div>
                             </div>
 
                             <div class="form-block">
                                 @*<label for="phone">Điện thoại*</label>
-                    <input type="text" id="phoneAjax" name="sodtAjax" required>*@
+                                    <input type="text" id="phoneAjax" name="sodtAjax" required>*@
                                 @Html.LabelFor(model => model.sdt, htmlAttributes: new { @class = "control-label col-md-2" })
                                 <div class="col-md-10">
-                                    @Html.TextBoxFor(model => model.sdt, new { @class = "form-control", id = "phoneAjax", required = "" })
+                                    @Html.TextBoxFor(model => model.sdt, new { @class = "form-control", id = "phoneAjax", Name = "sodtAjax", required = "" })
                                     @Html.ValidationMessageFor(model => model.sdt, "", new { @class = "text-danger" })
                                 </div>
                             </div>
@@ -113,10 +113,10 @@
 
                         <div class="form-block">
                             @*<label for="notes">Ghi chú</label>
-                <textarea id="notesAjax" name="ghichuAjax"></textarea>*@
+                                <textarea id="notesAjax" name="ghichuAjax"></textarea>*@
                             @Html.LabelFor(model => model.ghichu, new { @class = "control-label col-md-2" })
                             <div class="col-md-10">
-                                @Html.TextAreaFor(model => model.ghichu, new { @class = "form-control", id = "notesAjax", required = "" })
+                                @Html.TextAreaFor(model => model.ghichu, new { @class = "form-control", id = "notesAjax", Name = "ghichuAjax", required = "" })
                                 @Html.ValidationMessageFor(model => model.ghichu, "", new { @class = "text-danger" })
                             </div>
                         </div>
@@ -165,10 +165,10 @@
                                 <ul class="payment_methods methods">
                                     <li class="payment_method_bacs">
                                         @*<input id="payment_method_bacs" type="radio" class="input-radio" name="payment_method" value="COD" checked="checked" data-order_button_text="">
-                            <label for="payment_method_bacs">Thanh toán khi nhận hàng </label>*@
+                                            <label for="payment_method_bacs">Thanh toán khi nhận hàng </label>*@
                                         @Html.LabelFor(model => model.httt, new { @class = "control-label col-md-2" })
                                         <div class="col-md-10">
-                                            @Html.RadioButtonFor(model => model.httt, "COD", new { @class = "input-radio", id = "payment_method_bacs", Value = "COD" })
+                                            @Html.RadioButtonFor(model => model.httt, new { @class = "input-radio", id = "payment_method_bacs", Name = "payment_method", Value = "COD" })
                                             <span style="margin-right: 10%">COD</span>
                                             @Html.ValidationMessageFor(model => model.httt, "", new { @class = "input-radio" })
                                         </div>
@@ -179,10 +179,10 @@
 
                                     <li class="payment_method_cheque">
                                         @*<input id="payment_method_cheque" type="radio" class="input-radio" name="payment_method" value="ATM" data-order_button_text="">
-                            <label for="payment_method_cheque">Chuyển khoản </label>*@
+                                            <label for="payment_method_cheque">Chuyển khoản </label>*@
                                         @Html.LabelFor(model => model.httt, new { @class = "control-label col-md-2" })
                                         <div class="col-md-10">
-                                            @Html.RadioButtonFor(model => model.httt, "ATM", new { @class = "input-radio", id = "payment_method_cheque", Value = "ATM", @checked = "checked" })
+                                            @Html.RadioButtonFor(model => model.httt, new { @class = "input-radio", id = "payment_method_cheque", Name = "payment_method", Value = "Nam", @checked = "checked" })
                                             <span style="margin-right: 10%">ATM</span>
                                             @Html.ValidationMessageFor(model => model.httt, "", new { @class = "input-radio" })
                                         </div>
@@ -208,8 +208,8 @@
             int ma = (int)Session["idKH"];
             Model.EF.khachhang kh = new Model.EF.CoffeeHouseDbContext().khachhangs.FirstOrDefault(x => x.makh == ma);
             @*<form action = "{{route('dat-hang')}}" method = "post" class="beta-form-checkout">
-            <input type="hidden" name="_token" value="{{csrf_token()}}">*@
-            using (Html.BeginForm("Index", "CheckOut", new { area = "Client" }, FormMethod.Post))
+                <input type="hidden" name="_token" value="{{csrf_token()}}">*@
+            using (Html.BeginForm())
             {
                 @Html.AntiForgeryToken()
                 @Html.ValidationSummary(true, "", new { @class = "text-danger" })
@@ -226,10 +226,10 @@
 
                         <div class="form-block">
                             @*<label style="padding-top: 10px"> Email *</label>
-                            <input type="email" id="email" name="email" value="{{$khachhang->email}}" required placeholder="expample@gmail.com">*@
+                                <input type="email" id="email" name="email" value="{{$khachhang->email}}" required placeholder="expample@gmail.com">*@
                             @Html.LabelFor(model => model.gmail, new { @class = "control-label col-md-2", style = "padding-top: 10px" })
                             <div class="col-md-10">
-                                @Html.TextBoxFor(model => model.gmail, new { @class = "form-control", id = "email", Value = @kh.email, placeholder = "expample@gmail.com", required = "" })
+                                @Html.TextBoxFor(model => model.gmail, new { @class = "form-control", Name = "email", id = "email", Value = @kh.email, placeholder = "expample@gmail.com", required = "" })
                                 @Html.ValidationMessageFor(model => model.gmail, "", new { @class = "text-danger" })
                             </div>
                         </div>
@@ -237,10 +237,10 @@
 
                         <div class="form-block">
                             @*<label for="name">Họ tên*</label>
-                            <input type="text" name="hoten" value="{{$khachhang->hoten}}" placeholder="Họ tên" required>*@
+                                <input type="text" name="hoten" value="{{$khachhang->hoten}}" placeholder="Họ tên" required>*@
                             @Html.LabelFor(model => model.tenKH, new { @class = "control-label col-md-2" })
                             <div class="col-md-10">
-                                @Html.TextBoxFor(model => model.tenKH, new { @class = "form-control", id = "hoten", Value = kh.hoten, placeholder = "Họ tên", required = "" })
+                                @Html.TextBoxFor(model => model.tenKH, new { @class = "form-control", id = "hoten", Value = kh.hoten, Name = "hoten", placeholder = "Họ tên", required = "" })
                                 @Html.ValidationMessageFor(model => model.tenKH, "", new { @class = "text-danger" })
                             </div>
                         </div>
@@ -250,17 +250,17 @@
                                 @*<label> Giới tính </label>*@
 
                                 @*<input id="gender" type="radio" class="input-radio" name="gioitinh" value="Nam" checked="checked" style="width: 10%">
-                                <span style="margin-right: 10%"> Nam </span>
-                                <input id="gender" type="radio" class="input-radio" name="gioitinh" value="Nữ" style="width: 10%">
-                                <span>Nữ</span>*@
+                                    <span style="margin-right: 10%"> Nam </span>
+                                    <input id="gender" type="radio" class="input-radio" name="gioitinh" value="Nữ" style="width: 10%">
+                                    <span>Nữ</span>*@
                                 @Html.LabelFor(model => model.gioitinh, new { @class = "control-label col-md-2" })
                                 <div class="col-md-10">
-                                    @Html.RadioButtonFor(model => model.gioitinh, "Nam", new { @class = "input-radio", id = "gender", Value = "Nam", @checked = "checked" })
+                                    @Html.RadioButtonFor(model => model.gioitinh, "Nam", new { @class = "input-radio", id = "gender", Name = "gioitinh", Value = "Nam", @checked = "checked" })
                                     <span style="margin-right: 10%">Nam</span>
                                     @Html.ValidationMessageFor(model => model.gioitinh, "", new { @class = "input-radio" })
                                 </div>
                                 <div class="col-md-10">
-                                    @Html.RadioButtonFor(model => model.gioitinh, "Nữ", new { @class = "input-radio", id = "gender", Value = "Nữ" })
+                                    @Html.RadioButtonFor(model => model.gioitinh, "Nữ", new { @class = "input-radio", id = "gender", Name = "gioitinh", Value = "Nữ" })
                                     <span>Nữ</span>
                                     @Html.ValidationMessageFor(model => model.gioitinh, "", new { @class = "input-radio" })
                                 </div>
@@ -269,17 +269,17 @@
                             {
                                 @*<label>Giới tính</label>*@
                                 @*<input id="gender" type="radio" class="input-radio" name="gioitinh" value="Nam" style="width: 10%">
-                                <span style="margin-right: 10%"> Nam </span>
-                                <input id="gender" type="radio" class="input-radio" name="gioitinh" value="Nữ" checked="checked" style="width: 10%">
-                                <span>Nữ</span>*@
+                                    <span style="margin-right: 10%"> Nam </span>
+                                    <input id="gender" type="radio" class="input-radio" name="gioitinh" value="Nữ" checked="checked" style="width: 10%">
+                                    <span>Nữ</span>*@
                                 @Html.LabelFor(model => model.gioitinh, new { @class = "control-label col-md-2" })
                                 <div class="col-md-10">
-                                    @Html.RadioButtonFor(model => model.gioitinh, "Nam", new { @class = "input-radio", id = "gender", Value = "Nam" })
+                                    @Html.RadioButtonFor(model => model.gioitinh, "Nam", new { @class = "input-radio", id = "gender", Name = "gioitinh", Value = "Nam" })
                                     <span style="margin-right: 10%">Nam</span>
                                     @Html.ValidationMessageFor(model => model.gioitinh, "", new { @class = "input-radio" })
                                 </div>
                                 <div class="col-md-10">
-                                    @Html.RadioButtonFor(model => model.gioitinh, "Nữ", new { @class = "input-radio", id = "gender", Value = "Nữ", @checked = "checked" })
+                                    @Html.RadioButtonFor(model => model.gioitinh, "Nữ", new { @class = "input-radio", id = "gender", Name = "gioitinh", Value = "Nữ", @checked = "checked" })
                                     <span>Nữ</span>
                                     @Html.ValidationMessageFor(model => model.gioitinh, "", new { @class = "input-radio" })
                                 </div>
@@ -288,10 +288,10 @@
 
                         <div class="form-block">
                             @*<label for="adress" style="padding-top: 10px">Địa chỉ*</label>
-                            <input type="text" id="address" name="diachi" value="{{$khachhang->diachi}}" placeholder="Street Address" required>*@
+                                <input type="text" id="address" name="diachi" value="{{$khachhang->diachi}}" placeholder="Street Address" required>*@
                             @Html.LabelFor(model => model.diaChi, new { @class = "control-label col-md-2", style = "padding-top: 10px" })
                             <div class="col-md-10">
-                                @Html.TextBoxFor(model => model.diaChi, new { @class = "form-control", id = "address", Value = kh.diachi, placeholder = "Street Address", required = "" })
+                                @Html.TextBoxFor(model => model.diaChi, new { @class = "form-control", id = "address", Name = "diachi", Value = kh.diachi, placeholder = "Street Address", required = "" })
                                 @Html.ValidationMessageFor(model => model.diaChi, "", new { @class = "text-danger" })
                             </div>
                         </div>
@@ -299,20 +299,20 @@
 
                         <div class="form-block">
                             @*<label for="phone">Điện thoại*</label>
-                            <input type="text" id="phone" name="sodt" value="{{$khachhang->sodt}}" required>*@
+                                <input type="text" id="phone" name="sodt" value="{{$khachhang->sodt}}" required>*@
                             @Html.LabelFor(model => model.sdt, new { @class = "control-label col-md-2" })
                             <div class="col-md-10">
-                                @Html.TextBoxFor(model => model.sdt, new { @class = "form-control", id = "phone", Value = kh.sodt, required = "" })
+                                @Html.TextBoxFor(model => model.sdt, new { @class = "form-control", id = "phone", Value = kh.sodt, Name = "sodt", required = "" })
                                 @Html.ValidationMessageFor(model => model.sdt, "", new { @class = "text-danger" })
                             </div>
                         </div>
 
                         <div class="form-block">
                             @*<label for="notes">Ghi chú</label>
-                            <input type="textarea" id="notes" name="ghichu">*@
+                                <input type="textarea" id="notes" name="ghichu">*@
                             @Html.LabelFor(model => model.ghichu, new { @class = "control-label col-md-2" })
                             <div class="col-md-10">
-                                @Html.TextAreaFor(model => model.ghichu, new { @class = "form-control", id = "notes", Value = kh.ghichu, required = "" })
+                                @Html.TextAreaFor(model => model.ghichu, new { @class = "form-control", id = "notes", Name = "ghichu", Value = kh.ghichu, required = "" })
                                 @Html.ValidationMessageFor(model => model.ghichu, "", new { @class = "text-danger" })
                             </div>
                         </div>
@@ -363,10 +363,10 @@
                                     <ul class="payment_methods methods">
                                         <li class="payment_method_bacs">
                                             @*<input id="payment_method_bacs" type="radio" class="input-radio" name="payment_method" value="COD" checked="checked" data-order_button_text="">
-                                            <label for="payment_method_bacs">Thanh toán khi nhận hàng</label>*@
+                                                <label for="payment_method_bacs">Thanh toán khi nhận hàng</label>*@
                                             @Html.LabelFor(model => model.httt, new { @class = "control-label col-md-2" })
                                             <div class="col-md-10">
-                                                @Html.RadioButtonFor(model => model.httt, "COD", new { @class = "input-radio", id = "payment_method_bacs", Value = "COD", @checked = "checked" })
+                                                @Html.RadioButtonFor(model => model.httt, new { @class = "input-radio", id = "payment_method_bacs", Name = "payment_method", Value = "COD", @checked = "checked" })
                                                 <span style="margin-right: 10%">COD</span>
                                                 @Html.ValidationMessageFor(model => model.httt, "", new { @class = "input-radio" })
                                             </div>
@@ -377,14 +377,14 @@
 
                                         <li class="payment_method_cheque">
                                             @*<input id="payment_method_cheque" type="radio" class="input-radio" name="payment_method" value="ATM" data-order_button_text="">
-                                            <label for="payment_method_cheque">Chuyển khoản</label>*@
+                                                <label for="payment_method_cheque">Chuyển khoản</label>*@
                                             @Html.LabelFor(model => model.httt, new { @class = "control-label col-md-2" })
                                             <div class="col-md-10">
-                                                @Html.RadioButtonFor(model => model.httt, "ATM", new { @class = "input-radio", id = "payment_method_cheque", Value = "ATM" })
+                                                @Html.RadioButtonFor(model => model.httt, new { @class = "input-radio", id = "payment_method_cheque", Name = "payment_method", Value = "Nam" })
                                                 <span style="margin-right: 10%">ATM</span>
                                                 @Html.ValidationMessageFor(model => model.httt, "", new { @class = "input-radio" })
                                             </div>
-                                            <div class="payment_box payment_method_cheque" style="display: block;">
+                                            <div class="payment_box payment_method_cheque" style="display: none;">
                                                 Chuyển tiền đến tài khoản sau:
                                                 <br>- Số tài khoản: 123 456 789
                                                 <br>- Chủ TK: Nguyễn A
@@ -394,7 +394,6 @@
                                     </ul>
                                 </div>
                             </div>
-
                             <div class="text-center"><button type="submit" class="beta-btn primary">Đặt hàng<i class="fa fa-chevron-right"></i></button></div>
                         </div> <!-- .your-order -->
                     </div>

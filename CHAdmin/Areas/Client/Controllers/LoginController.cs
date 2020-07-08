@@ -19,8 +19,7 @@ namespace CHAdmin.Areas.Client.Controllers
             }
             else
             {
-                //return RedirectToAction("Index");
-                return Redirect(Request.Headers["Referer"].ToString());
+                return RedirectToAction("Index");
             }
         }
         // GET: Client/Login
@@ -44,7 +43,7 @@ namespace CHAdmin.Areas.Client.Controllers
                     //add session
                     Session["tenKH"] = log[0].tenKH;
                     Session["email"] = log[0].email;
-                    Session["idUser"] = (int)log[0].idUser;
+                    Session["idUser"] = log[0].idUser;
                     Session["idKH"] = log[0].idKH;
                     Session["thongbao"] = "ok";
                     return RedirectToAction("Check");

@@ -13,24 +13,15 @@ namespace CHAdmin.Areas.Client.Controllers
     {
         // GET: Client/ClientInfo
         [HttpGet]
-        public ActionResult Index()
+        public string Index()
         {
-            if (Session["idKH"] != null)
-            {
-                int id = (int)Session["idKH"];
-                ViewData["info"] = new ClientInfoDao().LoadInfo(id);
-                var result = new ClientInfoDao().LoadInfo(id);
-                return View();
-            }
-            return View();
-            //else
-            //{
-            //    return RedirectToAction("/Client/Login/Index");
-            //}
-
+            int id = (int)Session["idKH"];
+            ViewData["info"] = new ClientInfoDao().LoadInfo(id);
+            var result = new ClientInfoDao().LoadInfo(id);
+            return JsonConvert.SerializeObject(result);
         }
         [HttpPost]
-        public ActionResult Index(infoClientModel info)
+        public ActionResult ThayDoiInfo(infoClientModel info)
         {
             if (ModelState.IsValid)
             {
@@ -39,7 +30,7 @@ namespace CHAdmin.Areas.Client.Controllers
                 infoClientModel inf = new infoClientModel();
                 ViewBag.success = "Cập nhật thành công thông tin";
             }
-            return RedirectToAction("Index");
+            return View();
         }
     }
 }

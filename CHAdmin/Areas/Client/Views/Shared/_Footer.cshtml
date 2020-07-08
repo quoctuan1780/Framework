@@ -41,13 +41,11 @@
                             <div class="alert alert-danger">{{ Session('ntloi') }}</div>
                         @endif*@
                     <h4 class="widget-title">Đăng ký nhận tin</h4>
-                    @*<form action="{{ route('dang-ki-nhan-tin') }}" method="post">
+                    <form action="{{ route('dang-ki-nhan-tin') }}" method="post">
                         <input type="hidden" name="_token" value="{{csrf_token()}}">
                         <input type="email" name="email" placeholder="Nhập email...">
                         <button class="pull-right" type="submit">Đăng ký<i class="fa fa-chevron-right"></i></button>
-                    </form>*@
-                    <input type="email" id="nhantin" name="email" placeholder="Nhập email...">
-                    <button class="pull-right" onclick="getNews($('#nhantin').val())">Đăng ký<i class="fa fa-chevron-right"></i></button>
+                    </form>
                 </div>
             </div>
         </div> <!-- .row -->

@@ -14,6 +14,7 @@ namespace CHAdmin.Areas.Client.Controllers
         {
             ProductDao dao = new ProductDao();
             ViewData["cungloai"] = dao.getCungLoai(id);
+            ViewData["ten"] = dao.getTenLoai(id);
             return View();
         }
     }

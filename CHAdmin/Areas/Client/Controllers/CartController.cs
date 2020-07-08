@@ -25,7 +25,7 @@ namespace CHAdmin.Areas.Client.Controllers
                 Session["giohang"] = new List<cartModel>();  // Khởi tạo Session["giohang"] là 1 List<CartItem>
             }
             List<cartModel> giohang = Session["giohang"] as List<cartModel>;  // Gán qua biến giohang dễ code
-            CartDao.Them1SPVaoCart(id, giohang);
+            Session["giohang"]=CartDao.Them1SPVaoCart(id, giohang);
             return "ok";
         }
 

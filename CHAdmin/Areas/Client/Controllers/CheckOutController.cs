@@ -17,23 +17,27 @@ namespace CHAdmin.Areas.Client.Controllers
             return View();
         }
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public ActionResult Index(CheckOutInfoModel model)
         {
             if (ModelState.IsValid)
             {
                 List<cartModel> li = Session["giohang"] as List<cartModel>;
                 var id = Session["idKH"];
+                //return Json(model);
                 if (id == null)
                 {
                     new CheckOutDao().ThanhToanKoCoSan(li, model);
                     ViewBag.success = "Đặt hàng thành công";
-                    CheckOutInfoModel md = new CheckOutInfoModel();
+                    //CheckOutInfoModel md = new CheckOutInfoModel();
                 }
                 else
                 {
-                    new CheckOutDao().ThanhToan(li, (int)id, model);
-                    ViewBag.success = "Đặt hàng thành công";
-                    CheckOutInfoModel md = new CheckOutInfoModel();
+                    int ketqua = new CheckOutDao().ThanhToan(li, (int)id, model);
+                    if (ketqua > 0)
+                        ViewBag.success = "Đặt hàng thành công";
+                    else ViewBag.success = "Đặt hàng không thành công";
+                    //CheckOutInfoModel md = new CheckOutInfoModel();
                 }
                 Session["giohang"] = null;
             }
